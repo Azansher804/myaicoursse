@@ -1,0 +1,10 @@
+{
+  "name": "myaicoursse",
+  "version": "1.0.0",
+  "description": "AI-powered automotive encyclopedia",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "lint": "node --check server/index.js && node --check server/services/automotiveService.js && node --check server/services/chatService.js && node --check public/app.js"
+  }
+}

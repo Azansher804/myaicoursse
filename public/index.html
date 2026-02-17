@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoVerse AI | Intelligent Automotive Encyclopedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Rajdhani:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient-bg"></div>
+    <header class="hero glass">
+      <nav>
+        <h1>AutoVerse<span>AI</span></h1>
+        <a href="#explorer">Explore</a>
+      </nav>
+      <div class="hero-content">
+        <p class="eyebrow">Intelligent Automotive Encyclopedia</p>
+        <h2>From the first motorwagens to autonomous EV hypercars.</h2>
+        <p>
+          Ask natural-language questions and discover structured automotive history, engineering,
+          specifications, comparisons, and design evolution in one premium experience.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="explorer" class="panel glass">
+        <div class="section-title">
+          <h3>Vehicle Explorer</h3>
+          <p>Search by brand, year, body type, engine, or category.</p>
+        </div>
+        <form id="search-form" class="filters">
+          <input name="manufacturer" placeholder="Brand (e.g., Ford)" />
+          <input name="year" type="number" placeholder="Year" />
+          <input name="bodyType" placeholder="Body type" />
+          <input name="engine" placeholder="Engine keyword" />
+          <select name="category" id="category-select">
+            <option value="">All categories</option>
+          </select>
+          <button type="submit">Search</button>
+        </form>
+        <div id="vehicle-grid" class="vehicle-grid"></div>
+      </section>
+
+      <section class="dual-layout">
+        <article class="panel glass">
+          <div class="section-title">
+            <h3>Evolution Timeline</h3>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </article>
+
+        <article class="panel glass">
+          <div class="section-title">
+            <h3>Educational Modules</h3>
+          </div>
+          <div id="modules" class="modules"></div>
+        </article>
+      </section>
+
+      <section class="panel glass">
+        <div class="section-title">
+          <h3>Comparison Panel</h3>
+          <p>Select two or more vehicles to compare technical profiles.</p>
+        </div>
+        <div class="compare-controls">
+          <select id="compare-a"></select>
+          <select id="compare-b"></select>
+          <button id="compare-button">Compare</button>
+        </div>
+        <pre id="compare-output"></pre>
+      </section>
+
+      <section class="panel glass">
+        <div class="section-title">
+          <h3>Manufacturer Timelines</h3>
+        </div>
+        <div id="manufacturer-timelines" class="manufacturer-grid"></div>
+      </section>
+    </main>
+
+    <aside id="chat-widget" class="chat-widget glass collapsed">
+      <button id="chat-toggle">AI Car Expert</button>
+      <div class="chat-body">
+        <div id="chat-log" class="chat-log"></div>
+        <form id="chat-form" class="chat-input-row">
+          <input id="chat-input" placeholder="Ask about any car, era, or technology..." />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </aside>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
