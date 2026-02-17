@@ -1,0 +1,97 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #e9f1ff;
+  background: radial-gradient(circle at top, #1b2438 0%, #090c14 55%, #05070d 100%);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  padding: 48px 20px;
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #47d7ff;
+  border-radius: 999px;
+  color: #47d7ff;
+}
+
+.section {
+  margin: 20px 0;
+  padding: 24px;
+}
+
+.glass {
+  background: rgba(14, 22, 38, 0.68);
+  border: 1px solid rgba(71, 215, 255, 0.23);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.25);
+}
+
+.filters, .compare-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+input, select, button {
+  border-radius: 10px;
+  border: 1px solid #2f4864;
+  background: #0b1220;
+  color: #deecff;
+  padding: 10px 12px;
+}
+
+button {
+  background: linear-gradient(120deg, #2dd4ff, #6f7bff);
+  color: #071120;
+  font-weight: 700;
+}
+
+.vehicle-grid, .timeline, .modules, .compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.vehicle-card, .timeline-card, .module-card, .compare-card {
+  background: rgba(8, 14, 26, 0.9);
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid rgba(111, 123, 255, 0.2);
+  transition: transform .2s ease;
+}
+
+.vehicle-card:hover, .timeline-card:hover, .module-card:hover, .compare-card:hover {
+  transform: translateY(-4px);
+}
+
+.chat-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: min(400px, calc(100vw - 20px));
+}
+.chat-toggle { width: 100%; }
+.chat-panel { margin-top: 8px; padding: 12px; }
+.chat-log { max-height: 300px; overflow: auto; margin-bottom: 10px; }
+.chat-entry { border-bottom: 1px dashed #243852; margin-bottom: 8px; }
+.chat-form { display: flex; gap: 8px; }
+.chat-form input { flex: 1; }
+
+@media (max-width: 768px) {
+  .app-shell { padding: 12px; }
+  .hero { padding: 24px 8px; }
+}
